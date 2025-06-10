@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dasar C++ untuk SMK TKJ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Dasar C++ untuk SMK TKJ</h1>
+        <nav>
+            <a href="index.html">Beranda</a>
+            <a href="#">Materi</a>
+            <a href="#">Komunitas</a>
+            <a href="#">Tentang</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="intro">
+            <h2>Apa itu C++?</h2>
+            <p>C++ adalah bahasa pemrograman yang dikembangkan sebagai ekstensi dari bahasa C. C++ digunakan untuk membuat berbagai aplikasi, termasuk perangkat lunak sistem, game, dan aplikasi desktop. Bahasa ini mendukung pemrograman berorientasi objek dan memiliki sintaks yang mirip dengan bahasa C.</p>
+            <img src="https://www.w3schools.com/cpp/img/cpp_logo.png" alt="Logo C++" class="materi-image">
+        </section>
+
+        <section class="hello-world">
+            <h2>Program Pertama: Hello World</h2>
+            <p>Program "Hello World" adalah program pertama yang biasanya dibuat oleh pemula untuk memastikan bahwa lingkungan pengembangan telah disiapkan dengan benar. Berikut adalah contoh kode untuk program "Hello World" dalam C++:</p>
+            <pre><code class="language-c">
+#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    cout &lt;&lt; "Hello, World!" &lt;&lt; endl;
+    return 0;
+}
+            </code></pre>
+            <p>Setelah menulis kode di atas, kompilasi dan jalankan program. Jika berhasil, pesan "Hello, World!" akan ditampilkan di layar.</p>
+        </section>
+
+        <section class="variables">
+            <h2>Variabel dan Tipe Data</h2>
+            <p>Variabel digunakan untuk menyimpan data. C++ memiliki berbagai tipe data, seperti:</p>
+            <ul>
+                <li><code>int</code>: Bilangan bulat (contoh: <code>int angka = 10;</code>)</li>
+                <li><code>float</code>: Bilangan desimal (contoh: <code>float harga = 19.99;</code>)</li>
+                <li><code>char</code>: Karakter tunggal (contoh: <code>char huruf = 'A';</code>)</li>
+                <li><code>string</code>: Teks (contoh: <code>string nama = "Budi";</code>)</li>
+            </ul>
+            <p>Contoh penggunaan variabel:</p>
+            <pre><code class="language-c">
+#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int umur = 20;
+    string nama = "Budi";
+    cout &lt;&lt; "Nama: " &lt;&lt; nama &lt;&lt; ", Umur: " &lt;&lt; umur &lt;&lt; endl;
+    return 0;
+}
+            </code></pre>
+        </section>
+
+        <section class="operators">
+            <h2>Operator Aritmatika</h2>
+            <p>C++ mendukung berbagai operator aritmatika, seperti:</p>
+            <ul>
+                <li><code>+</code>: Penjumlahan</li>
+                <li><code>-</code>: Pengurangan</li>
+                <li><code>*</code>: Perkalian</li>
+                <li><code>/</code>: Pembagian</li>
+                <li><code>%</code>: Modulus (sisa bagi)</li>
+            </ul>
+            <p>Contoh penggunaan operator aritmatika:</p>
+            <pre><code class="language-c">
+#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int a = 10;
+    int b = 5;
+    cout &lt;&lt; "Penjumlahan: " &lt;&lt; a + b &lt;&lt; endl;
+    cout &lt;&lt; "Pengurangan: " &lt;&lt; a - b &lt;&lt; endl;
+    cout &lt;&lt; "Perkalian: " &lt;&lt; a * b &lt;&lt; endl;
+    cout &lt;&lt; "Pembagian: " &lt;&lt; a / b &lt;&lt; endl;
+    cout &lt;&lt; "Modulus: " &lt;&lt; a % b &lt;&lt; endl;
+    return 0;
+}
+            </code></pre>
+        </section>
+
+        <section class="conditionals">
+            <h2>Pernyataan Kondisional</h2>
+            <p>Untuk membuat keputusan dalam program, C++ menyediakan pernyataan kondisional seperti <code>if</code>, <code>else if</code>, dan <code>else</code>.</p>
+            <p>Contoh penggunaan pernyataan kondisional:</p>
+            <pre><code class="language-c">
+#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    int nilai = 85;
+    if (nilai >= 75) {
+        cout &lt;&lt; "Lulus!" &lt;&lt; endl;
+    } else {
+        cout &lt;&lt; "Tidak Lulus." &lt;&lt; endl;
+    }
+    return 0;
+}
+            </code></pre>
+        </section>
+
+        <section class="loops">
+            <h2>Perulangan</h2>
+            <p>C++ mendukung berbagai jenis perulangan, seperti <code>for</code>, <code>while</code>, dan <code>do-while</code>.</p>
+            <p>Contoh penggunaan perulangan <code>for</code>:</p>
+            <pre><code class="language-c">
+#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    for (int i = 1; i <= 5; i++) {
+        cout &lt;&lt; "Iterasi ke-" &lt;&lt; i &lt;&lt; endl;
+    }
+    return 0;
+}
+            </code></pre>
+        </section>
+        <section class="next-steps">
+            <h2>Langkah Selanjutnya</h2>
+            <p>Setelah memahami dasar-dasar C++, kamu bisa mulai belajar topik lanjutan seperti:</p>
+            <ul>
+                <li>Fungsi (functions)</li>
+                <li>Array dan String</li>
+                <li>Struktur dan Class (OOP)</li>
+                <li>Penggunaan library dan integrasi dengan Arduino</li>
+            </ul>
+            <p>Untuk latihan lebih lanjut, kamu bisa membaca dokumentasi resmi di <a href="https://www.w3schools.com/cpp/" target="_blank">W3Schools C++</a>.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 BelajarArduinoSMK. Dibuat dengan semangat edukasi.</p>
+    </footer>
+</body>
+</html>
+
+        <section class="next-steps">
+            <h
+::contentReference[oaicite:1]{index=1}
+ 

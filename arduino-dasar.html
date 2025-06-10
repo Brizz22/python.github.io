@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dasar Arduino Uno</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Dasar Arduino Uno</h1>
+        <nav>
+            <a href="index.html">Beranda</a>
+            <a href="#">Materi</a>
+            <a href="#">Komunitas</a>
+            <a href="#">Tentang</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="intro">
+            <h2>Apa itu Arduino Uno?</h2>
+            <p>Arduino Uno adalah papan mikrokontroler berbasis ATmega328P yang digunakan untuk membuat berbagai proyek elektronik interaktif. Dengan Arduino, kamu bisa mengontrol LED, motor, sensor, dan banyak lagi menggunakan kode sederhana.</p>
+            <img src="img-1.jpg" class="materi-image"/>
+        </section>
+
+        <section class="setup">
+            <h2>Langkah Pertama: Menyiapkan Arduino</h2>
+            <ol>
+                <li>Unduh dan instal <a href="https://www.arduino.cc/en/software" target="_blank">Arduino IDE</a>.</li>
+                <li>Hubungkan Arduino ke komputer menggunakan kabel USB.</li>
+                <li>Atur jenis board dan port serial di menu <strong>Tools</strong> pada IDE.</li>
+            </ol>
+        </section>
+
+        <section class="blink">
+            <h2>Program Pertama: Blink LED</h2>
+            <p>Program "Blink" menyalakan dan mematikan LED pada pin 13 secara bergantian setiap detik. Ini adalah cara yang baik untuk memastikan bahwa board Arduino dan IDE telah terhubung dengan benar.</p>
+            <pre><code class="language-c">
+void setup() {
+  pinMode(13, OUTPUT);
+}
+
+void loop() {
+  digitalWrite(13, HIGH);
+  delay(1000);
+  digitalWrite(13, LOW);
+  delay(1000);
+}
+            </code></pre>
+            <p>Setelah menulis kode di atas, klik tombol <strong>Upload</strong> di IDE. Jika berhasil, LED pada board Arduino akan mulai berkedip.</p>
+        </section>
+
+        <section class="next-steps">
+            <h2>Langkah Selanjutnya</h2>
+            <p>Setelah memahami dasar-dasar ini, kamu bisa mulai bereksperimen dengan proyek lain seperti:</p>
+            <ul>
+                <li>Menyalakan LED dengan tombol</li>
+                <li>Membaca data dari sensor suhu</li>
+                <li>Membuat sistem alarm sederhana</li>
+            </ul>
+            <p>Untuk tutorial lebih lanjut, kunjungi <a href="https://www.arduinoindonesia.id/" target="_blank">Arduino Indonesia</a>.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 BelajarArduinoSMK. Dibuat dengan semangat edukasi.</p>
+    </footer>
+</body>
+</html>
