@@ -1,0 +1,36 @@
+// server/server.js
+const express = require('express');
+const mongoose = require('mongoose');
+const cors = require('cors');
+const dotenv = require('dotenv');
+const User = require('./models/User');
+
+dotenv.config();
+const app = express();
+app.use(cors());
+app.use(express.json());
+app.use(express.static('public'));
+
+mongoose.connect(process.env.MONGO_URI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+}).then(() => console.log("🟢 Connected to MongoDB"));
+
+app.post('/api/register', async (req, res) => {
+    const { username, email, password } = req.body;
+    try {
+        const existing = await User.findOne({ email });
+        if (existing) {
+            return res.json({ message: "Email sudah terdaftar." });
+        }
+
+        const user = new User({ username, email, password });
+        await user.save();
+        res.json({ message: "Pendaftaran berhasil!" });
+    } catch (err) {
+        res.status(500).json({ message: "Server error." });
+    }
+});
+
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => console.log(`🚀 Server running on http://localhost:${PORT}`));

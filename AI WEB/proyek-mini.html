@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyek Arduino Mini</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Proyek Arduino Mini: LED Blink dan Tombol</h1>
+        <nav>
+            <a href="index.html">Beranda</a>
+            <a href="arduino-dasar.html">Dasar Arduino</a>
+            <a href="cpp-dasar.html">Dasar C++</a>
+            <a href="#">Komunitas</a>
+            <a href="#">Tentang</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="intro">
+            <h2>Proyek: Menyalakan LED dengan Tombol</h2>
+            <p>Dalam proyek ini, kita akan membuat sistem yang menyalakan LED ketika tombol ditekan. Ini adalah proyek sederhana yang mengajarkan tentang penggunaan input (tombol) dan output (LED) pada Arduino.</p>
+            <img src="https://store.arduino.cc/collections/frontpage/products/arduino-uno-rev3" alt="Arduino Uno" class="materi-image">
+        </section>
+
+        <section class="components">
+            <h2>Komponen yang Diperlukan</h2>
+            <ul>
+                <li>Arduino Uno</li>
+                <li>LED</li>
+                <li>Resistor 220Ω</li>
+                <li>Tombol</li>
+                <li>Jumper wires</li>
+                <li>Breadboard</li>
+            </ul>
+            <p>Hubungkan komponen-komponen seperti pada diagram berikut:</p>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/75/Arduino_Uno_Rev3_Pinout.jpg" alt="Arduino Pinout" class="materi-image">
+        </section>
+
+        <section class="circuit">
+            <h2>Diagram Rangkaian</h2>
+            <p>Hubungkan LED pada pin 13 dan tombol pada pin 2, dengan menggunakan resistor sesuai dengan instruksi berikut:</p>
+            <ul>
+                <li>Pin 13 -> LED -> Resistor 220Ω -> Ground</li>
+                <li>Pin 2 -> Tombol -> Ground (dengan pull-up resistor internal)</li>
+            </ul>
+        </section>
+
+        <section class="code">
+            <h2>Kode Program</h2>
+            <p>Berikut adalah kode untuk menyalakan LED ketika tombol ditekan:</p>
+            <pre><code class="language-c">
+int ledPin = 13;      // LED di pin 13
+int buttonPin = 2;    // Tombol di pin 2
+int buttonState = 0;   // Variabel untuk membaca status tombol
+
+void setup() {
+  pinMode(ledPin, OUTPUT);  // Set pin LED sebagai output
+  pinMode(buttonPin, INPUT);  // Set pin tombol sebagai input
+}
+
+void loop() {
+  buttonState = digitalRead(buttonPin);  // Baca status tombol
+
+  if (buttonState == HIGH) {  // Jika tombol ditekan
+    digitalWrite(ledPin, HIGH);  // Nyalakan LED
+  } else {
+    digitalWrite(ledPin, LOW);  // Matikan LED
+  }
+}
+            </code></pre>
+            <p>Upload kode ini ke Arduino kamu dan tombol akan mengontrol LED di pin 13.</p>
+        </section>
+
+        <section class="next-steps">
+            <h2>Langkah Selanjutnya</h2>
+            <p>Setelah berhasil membuat proyek ini, kamu bisa mengembangkan proyek lain, seperti:</p>
+            <ul>
+                <li>Membuat sistem alarm menggunakan sensor gerak</li>
+                <li>Menyalakan lebih dari satu LED dengan tombol</li>
+                <li>Membaca data dari sensor suhu dan menampilkan di serial monitor</li>
+            </ul>
+            <p>Untuk tutorial lebih lanjut, kamu bisa mengunjungi <a href="https://www.arduino.cc/en/Tutorial/HomePage" target="_blank">Arduino Tutorials</a>.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 BelajarArduinoSMK. Dibuat dengan semangat edukasi.</p>
+    </footer>
+</body>
+</html>
